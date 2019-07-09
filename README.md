@@ -16,9 +16,9 @@ It is also advisable to use this project on an Apple Mac OS X device.
 
 First of all, there is a folder in the root folder called &quot;scripts&quot;, which contains bootstrap.sh, a script that should be used to download the correct files. There is also an import file with Postman http requests here, which can be loaded into POSTMAN.
 
-The project consists of a number of separate components, the Hyperledger fabric network sets up a separate network called &quot;basic-network&quot;, after which it installs and implements the chain code (Javascript) with the CLI container.
+The project consists of a number of separate components, the Hyperledger fabric network sets up a separate network called &quot;basic-network&quot;, after which it installs and implements the chain code (Javascript) with the CLI container. In order to start up this project it's enough to use the startFabric.sh script which is included in the /fabcar directory in the project root folder. This script sets up the needed components and implements the chaincode to the peer. Make sure that if you update the chaincode you have to increment the version number on the lines in startfabric.sh with the chaincode installation and instantation.  
 
-There is also a small Node.js Express api present in the project. This can be started with &quot;node server.js&quot;. This small API provides communication between the client and the chain code on the peer. An example of these calls can be seen in the printout of the postman requests.
+There is also a small Node.js Express api present in the project. This can be started with &quot;node server.js&quot;. This small API provides communication between the client and the chain code on the peer. An example of these calls can be seen in the export of the postman requests.
 
-When running, the statedb can be viewed on url; http://localhost:5984/_utils/
+When running, the couchdb statedb can be viewed on url; http://localhost:5984/_utils/
 
